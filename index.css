@@ -23,7 +23,7 @@ body{
 .title{
   margin-top:10px;
   display:flex;
-  justify-content:space-around;
+  justify-content:space-between;
 }
 .logo{
   font-size:35px;
@@ -49,7 +49,6 @@ body{
 }
 .title li:hover{
   transform:scale(0.9);
-
 }
 a{
   color:white;
@@ -146,13 +145,7 @@ a{
   border:2px solid white;
   border-radius:30%;
 }
-.social a i:hover{
-  background-color:rgb(20, 168, 40);
-  transition: .5s;
-  transform:translateY(-5px);
-  box-shadow: 0 4px 6px 2px  rgb(20, 168, 40);
-  border:2px solid skyblue;
-}
+
 .image{
   max-width:400px;
   height: auto;
@@ -163,17 +156,7 @@ a{
   border-radius:50%;
   border:10px solid white;
 }
-.image img:hover{
-  box-shadow: 0 4px 6px 10px lime;
-  transition: 1s;
-  transform:translateY(-10px);
-}
-.image:hover{
-  box-shadow: 0 4px 6px 5px red;
-  transition: 1s;
-  transform:translateY(-10px);
 
-}
 /* skill */
 .skill {
   display: flex;
@@ -192,11 +175,6 @@ a{
   transition: transform 0.3s ease;
 }
 
-.skill .box:hover {
-  transform: translateY(-10px);
-  transition:.3s;
-  box-shadow: 0 4px 6px 10px lime;
-}
 
 .skill .box img {
   width: 100%;
@@ -234,9 +212,33 @@ footer li:last-child{
   .skill .box .content{
     padding:10px;
   }
+  .image img:hover{
+    box-shadow: 0 4px 6px 10px lime;
+    transition: 1s;
+    transform:translateY(-10px);
+  }
+  .skill .box:hover {
+    transform: translateY(-10px);
+    transition:.3s;
+    box-shadow: 0 4px 6px 10px lime;
+  }
+  .social a i:hover{
+    background-color:rgb(20, 168, 40);
+    transition: .5s;
+    transform:translateY(-5px);
+    box-shadow: 0 4px 6px 2px  rgb(20, 168, 40);
+    border:2px solid skyblue;
+  }
 }
 @media (max-width:800px){
   /* header */
+  .social a i:click{
+    background-color:rgb(20, 168, 40);
+    transition: .5s;
+    transform:translateY(-5px);
+    box-shadow: 0 4px 6px 2px  rgb(20, 168, 40);
+    border:2px solid skyblue;
+  }
   .dropdown{
     display:flex;
     flex-direction:column;
@@ -274,8 +276,9 @@ footer li:last-child{
   }
   .mine{
     flex-direction:column-reverse;
-    margin-left: auto;
-    margin-right: auto;
+  }
+  .mine .info{
+    font-size:15px;
   }
 }
 @media (max-width:500px){
