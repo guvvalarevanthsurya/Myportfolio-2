@@ -21,14 +21,14 @@ body{
 
 /* .title */
 .title{
-  margin-top:10px;
+  margin-top:15px;
   display:flex;
   justify-content:space-between;
 }
 .logo{
   font-size:35px;
   color:aliceblue;
-  margin-left:10px;
+  margin-left:20px;
   font-weight:bolder;
 }
 .logo span{
@@ -37,7 +37,7 @@ body{
 .links{
   display: flex;
   flex-direction:row;
-  gap:2rem;
+  gap:25px;
   margin-right:30px;
 }
 .links li{
@@ -54,11 +54,6 @@ a{
   color:white;
   text-decoration: none;
 }
-.title a:hover{
-  color:lime;
-  background-color:rgb(90, 23, 99);
-  box-shadow:02px 2px 3px 2px lime;
-}
 .menu_bar{
   font-size:3rem;
   color:white;
@@ -66,6 +61,7 @@ a{
 .menu_bar:hover{
   cursor:pointer;
 }
+/* dropdown */
 .dropdown{
   display:none;
   position:absolute;
@@ -94,10 +90,10 @@ a{
   display:none;
 }
 
-/* main */
+                /* main */
 .mine{
   display:flex;
-  justify-content: space-around;
+  justify-content:space-around;
   align-content:center;
   margin:30px ;
 }
@@ -137,7 +133,6 @@ a{
   margin-top:30px;
   display: flex;
   justify-content:space-around;
-
 }
 .social a i{
   font-size:36px;
@@ -175,7 +170,6 @@ a{
   transition: transform 0.3s ease;
 }
 
-
 .skill .box img {
   width: 100%;
   height: auto;
@@ -184,27 +178,263 @@ a{
 .skill .box .content {
   padding: 20px;
 }
-/* footer */
 footer{
   background-color:pink;
   padding:1rem;
   text-align:center;
-  margin-top: auto;
+  margin-top:10px;
 }
 
 footer li{
   list-style-type: none;
+  font-size:20px;
   padding:10px;
 }
-footer li:first-child{
-  font-size:30px;
-  font-weight:bolder;
-}
-footer li:last-child{
-  font-size:20px;
-  font-weight:500;
-}
 
+/* large laptops */
+@media (min-width:950px){
+  .image img:hover{
+    box-shadow: 0 4px 6px 3px lime;
+    transition: 1s;
+    transform:translateY(-10px);
+  }
+  .skill .box:hover {
+    transform: translateY(-10px);
+    transition:.3s;
+    box-shadow: 0 4px 6px 5px lime;}
+  .social a i:hover{
+    background-color:rgb(20, 168, 40);
+    transition: .5s;
+    transform:translateY(-5px);
+    box-shadow: 0 4px 6px 1px  rgb(20, 168, 40);
+    border:2px solid skyblue;
+    }
+  .links{
+     gap:3rem;
+   }
+
+}
+/* medium sized laptops */
+@media (max-width:950px)  and  (min-width:850px){
+  .skill .box{
+    max-width:250px;
+  }
+  .image img:hover{
+    box-shadow: 0 4px 6px 10px lime;
+    transition: 1s;
+    transform:translateY(-10px);
+  }
+  .skill .box:hover {
+    transform: translateY(-10px);
+    transition:.3s;
+    box-shadow: 0 4px 6px 10px lime;
+  }
+  .social a i:hover{
+    background-color:rgb(20, 168, 40);
+    transition: .5s;
+    transform:translateY(-5px);
+    box-shadow: 0 4px 6px 2px  rgb(20, 168, 40);
+    border:2px solid skyblue;
+  }
+}
+/* tablets */
+@media (max-width:849px) and (min-width:750px){
+  .logo{
+    font-size: 25px;
+  }
+  .image{
+    max-width:350px;
+  }
+  .mine .info{
+    font-size:15px;
+  }
+  .skill .box{
+    height:350px;
+    max-width:230px;
+  }
+  .skill .box .content{
+    padding:10px;
+  }
+  .image img:hover{
+    box-shadow: 0 4px 6px 10px lime;
+    transition: 1s;
+    transform:translateY(-10px);
+  }
+  .skill .box:hover {
+    transform: translateY(-10px);
+    transition:.3s;
+    box-shadow: 0 4px 6px 10px lime;
+  }
+  .social a i:hover{
+    background-color:rgb(20, 168, 40);
+    transition: .5s;
+    transform:translateY(-5px);
+    box-shadow: 0 4px 6px 2px  rgb(20, 168, 40);
+    border:2px solid skyblue;
+  }
+}
+@media (max-width:749px) and (min-width:680px) {
+  .logo{
+    font-size: 30px;
+  }
+  .links{
+    gap:15px;
+  }
+  .links li{
+    font-size:15px;
+  }
+  .mine .info{
+    font-size:14px;
+  }
+  .image{
+    max-width:300px;
+  }
+  .skill {
+    margin:10px 10px 10px 10px;
+  }
+  .skill .box{
+    width:210px;
+  }
+  .skill .box .content{
+    padding:5px;
+    font-size:18px;
+    height:180px;
+  }
+}
+@media (max-width:679px) and (min-width:600px){
+  .logo{
+    font-size: 30px;
+  }
+  .dropdown{
+    display:flex;
+    flex-direction:column;
+  }
+  .title .links{
+    display: none;
+  }
+  .menu_bar{
+    display:inherit;
+    margin-right:20px;
+  }
+  .mine .info{
+    font-size:14px;
+  }
+  .image{
+    max-width:250px;
+  }
+  .skill{
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+  .skill .box{
+    width:400px;
+    height:400px;
+    margin:20px;
+  }
+  .skill .box .content{
+    padding:10px;
+  }
+}
+@media (max-width:599px){
+  .logo{
+    font-size: 30px;
+  }
+  .dropdown{
+    display:flex;
+    flex-direction:column;
+  }
+  .title .links{
+    display: none;
+  }
+  .menu_bar{
+    display:inherit;
+    margin-right:20px;
+  }
+  .mine{
+    flex-direction:column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+  .mine .info{
+    font-size:14px;
+  }
+  .image{
+    margin-left:20%;
+    margin-right:20%;
+    max-width:60%;
+  }
+  .skill{
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+  .skill .box{
+    max-width:400px;
+    max-height:400px;
+    margin:20px;
+  }
+  .skill .box .content{
+    padding:10px;
+  }
+}
+@media (max-width:400px){
+  .image{
+    max-width: 80%;;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media (max-width:344px){
+  .logo{
+    font-size:25px;
+  }
+  .menu_bar{
+    font-size:24px;
+  }
+  .mine{
+    margin-left:3px;
+    margin-right: 3px;
+  }
+  .mine .info{
+    font-size:12px;
+  }
+  .skill .box{
+    max-width:250px;
+    max-height:350px;
+    margin:20px;
+  }
+}
+@media (max-width:288px){
+  .logo{
+    font-size:20px;
+  }
+  .mine .info{
+    font-size:10px;
+  }
+  .social a i{
+    font-size:25px;
+  }
+  .skill .box{
+    max-width:200px;
+    max-height:250px;
+  }
+  .skill .box .content{
+    font-size: 10px;
+  }
+  footer li{
+    font-size:12px;
+  }
+}
+@media (max-width:220px){
+  .logo{
+    font-size:15px ;
+  }
+  footer li{
+    font-size:10px;
+  }
+}
+/* 
 @media (max-width:950px) and (min-width:801px){
   .skill .box{
     width:250px;
@@ -231,7 +461,6 @@ footer li:last-child{
   }
 }
 @media (max-width:800px){
-  /* header */
   .social a i:click{
     background-color:rgb(20, 168, 40);
     transition: .5s;
@@ -246,12 +475,9 @@ footer li:last-child{
   .title .links{
     display: none;
   }
-  /* main info */
   .info{
     font-size: medium;
   }
-  
-  /* skills */
   .skill{
     flex-direction:column;
     justify-content: center;
@@ -317,4 +543,4 @@ footer li:last-child{
     font-weight:500;
   }
   
-}
+} */
