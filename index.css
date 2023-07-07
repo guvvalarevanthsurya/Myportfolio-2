@@ -65,13 +65,15 @@ a{
 .dropdown{
   display:none;
   position:absolute;
-  right:2rem;
   overflow:hidden;
+  top:50px;
   height:0px;
-  top:60px;
-  width:240px;
+  margin-left:50%;
+  width:45%;
   border-radius:20px;
-  background:rgba(255, 255, 255, 0.2);
+  background-color:rgba(0,0,0,0.9);
+  display:flex;
+  flex-direction:column;
 }
 .dropdown.open{
   height:240px;
@@ -82,6 +84,7 @@ a{
   display:flex;
   justify-content:center;
   align-items:center;
+  font-size:18px;
 }
 .dropdown li a{
   color:rgb(38, 75, 75);
@@ -182,7 +185,7 @@ footer{
   background-color:pink;
   padding:1rem;
   text-align:center;
-  margin-top:10px;
+  margin-top:1;
 }
 
 footer li{
@@ -215,7 +218,7 @@ footer li{
 
 }
 /* medium sized laptops */
-@media (max-width:950px)  and  (min-width:850px){
+@media (max-width:950px) and (min-width:850px){
   .skill .box{
     max-width:250px;
   }
@@ -341,9 +344,21 @@ footer li{
     font-size: 30px;
   }
   .dropdown{
+    position:absolute;
+    overflow:hidden;
+    top:50px;
+    height:0px;
+    width:90%;
+    margin-left:5%;
+    border-radius:20px;
+    background-color:rgba(0,0,0,0.9);
     display:flex;
     flex-direction:column;
   }
+  .dropdown.open{
+   max-height:350px;
+  }
+  
   .title .links{
     display: none;
   }
@@ -360,9 +375,9 @@ footer li{
     font-size:14px;
   }
   .image{
-    margin-left:20%;
-    margin-right:20%;
-    max-width:60%;
+    margin-left:10%;
+    margin-right:10%;
+    max-width:80%;
   }
   .skill{
     flex-direction:column;
